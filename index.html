@@ -151,10 +151,18 @@ Joseph Nyajuoga
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li><p>Policymakers need <strong>reliable local unemployment statistics</strong>.</p></li>
-<li><p>Labor Force Surveys are reliable at national level.</p></li>
-<li><p>But become unreliable at disaggregated levels.</p></li>
-<li><p>Many counties cannot publish direct estimates</p></li>
+<li><p>Demand: Policymakers need <strong>reliable local unemployment statistics</strong>.</p></li>
+<li><p>Large-scale surveys like the Labour Force Survey (LFS) are designed for national accuracy. For small domains like counties, direct estimates are often unreliable due to insufficient sample sizes.</p>
+<div class="callout callout-note no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<ul>
+<li><p>This leads to high sampling variance and wide margins of error for disaggregated estimates.</p></li>
+<li><p>In extreme cases, estimates are suppressed entirely.</p></li>
+</ul>
+</div>
+</div>
+</div></li>
 </ul>
 </div><div class="column" style="width:60%;">
 <iframe src="imports/outputs/html/sweden_direct_map.html" width="100%" height="800" style="border:0;">
@@ -162,6 +170,9 @@ Joseph Nyajuoga
 </div></div>
 <aside class="notes">
 <p>Set the context fast. This is a real official statistics problem.</p>
+<ul>
+<li>For example, the Swedish LFS did not report estimates for Gotland County due to having fewer than 40 quarterly observations.</li>
+</ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -174,9 +185,30 @@ Joseph Nyajuoga
           display:block!important;
       }</style></aside>
 </section>
-<section id="motivation" class="slide level2">
-<h2>Motivation</h2>
-<p>Here I write about my motivation for the study</p>
+<section id="the-framework-borrowing-strength-with-small-area-estimation" class="slide level2">
+<h2>The Framework: Borrowing Strength with Small Area Estimation</h2>
+<ul>
+<li><p>Small Area Estimation (SAE) provides a model-based solution by integrating survey data with auxiliary information to improve precision.</p></li>
+<li><p>There are two main broad categories of models under SAE:</p>
+<ol type="1">
+<li>Area- Level Models</li>
+<li>Unit Level Models</li>
+</ol></li>
+<li><p>This research employs the Fay-Herriot (FH) model, a well-established hierarchical model in official statistics.</p></li>
+</ul>
+<aside class="notes">
+<p>Battese–Harter–Fuller (BHF) model, Fay-Herriot Model</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="methodology" class="slide level2">
 <h2>Methodology</h2>

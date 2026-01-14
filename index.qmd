@@ -26,6 +26,7 @@ format:
     #incremental: true
 execute:
   echo: false
+  freeze: auto
 resources:
   - imports/outputs/html/sweden_direct_map.html
   - imports/outputs/html/sweden_direct_map_files/
@@ -35,31 +36,50 @@ resources:
 
 ::::: columns
 ::: {.column width="40%"}
--   Policymakers need **reliable local unemployment statistics**.
+-   Demand: Policymakers need **reliable local unemployment statistics**.
 
--   Labor Force Surveys are reliable at national level.
+-   Large-scale surveys like the Labour Force Survey (LFS) are designed for national accuracy. For small domains like counties, direct estimates are often unreliable due to insufficient sample sizes.
 
--   But become unreliable at disaggregated levels.
+    ::: {.callout-note appearance="simple" icon="false"}
+    -   This leads to high sampling variance and wide margins of error for disaggregated estimates.
 
--   Many counties cannot publish direct estimates
+    -   In extreme cases, estimates are suppressed
+        entirely.
+    :::
 :::
 
 ::: {.column width="60%"}
+<iframe src="imports/outputs/html/sweden_direct_map.html" width="100%" height="800" style="border:0;">
 
-<iframe src="imports/outputs/html/sweden_direct_map.html" width="100%" height="800" style="border:0;"></iframe>
-
+</iframe>
 :::
 :::::
 
 ::: notes
 Set the context fast. This is a real official statistics problem.
+
+-   For example, the Swedish LFS did not
+    report estimates for Gotland County due to having
+    fewer than 40 quarterly observations.
 :::
 
 ------------------------------------------------------------------------
 
-## Motivation
+## The Framework: Borrowing Strength with Small Area Estimation
 
-Here I write about my motivation for the study
+-   Small Area Estimation (SAE) provides a model-based solution by integrating survey data with auxiliary information to improve precision.
+
+-   There are two main broad categories of models under SAE:
+
+     1.  Area- Level Models
+     2.   Unit Level Models
+
+-   This research employs the Fay-Herriot (FH) model,
+    a well-established hierarchical model in official statistics.
+
+::: notes
+Battese–Harter–Fuller (BHF) model, Fay-Herriot Model
+:::
 
 ## Methodology
 

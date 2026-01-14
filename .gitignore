@@ -26,7 +26,7 @@ renv/
 # _site/
 
 # -----------------------------
-# Python virtual environments + caches
+# Python virtual environments + cachess
 # -----------------------------
 .venv/
 venv/
@@ -43,3 +43,7 @@ __pycache__/
 
 
 index_files/
+.posit
+
+/.quarto/
+/_site/
