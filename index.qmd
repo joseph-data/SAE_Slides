@@ -206,18 +206,46 @@ Table 4.1 shows that the reduced original scale FH model with log elevation, slo
 
 ::::: columns
 ::: {.column width="60%"}
-![](images/paste-19.png)
+![](images/paste-22.png)
+
+![](images/paste-20.png)
 :::
 
 ::: {.column width="40%"}
--   Normality: Q-Q Plots
+-   Normality: Q-Q Plots of residuals and random effects show close adherence to a normal distribution.
+
+-   Formal Tests: The Shapiro-Wilk test fails to reject the null hypothesis of normality for both standardized residuals (p = 0.70) and random effects (p = 0.64).
 :::
 :::::
 
-## Conclusions
+## Conclusions & Future Works
+
+![](images/paste-26.png){fig-align="center" width="100%"}
+
+**Future Works:**
+
+-   Spatial FH Models
+-   Spatial - Temporal Models
+-   Data Integration
+
+::: notes
+![](images/paste-23.png){width="805"}
+
+![](images/paste-24.png){width="783"}
+:::
 
 ## Beyond Thesis Work
 
-![](images/paste-2.png){fig-align="center" width="206"}
+::::: columns
+::: {.column width="60%"}
+The European Big Data Hackathon - 2025
+
+![](images/paste-1.jpeg)
+:::
+
+::: {.column width="40%"}
+![](images/paste-2.png){fig-align="center" width="100%"}
+:::
+:::::
 
 ## Thank you for your attention..
