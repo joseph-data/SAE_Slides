@@ -140,7 +140,6 @@ $$
 \gamma_i
 = \frac{\sigma_u^2}{\sigma_u^2 + \psi_i}
 $$
-
 :::
 ::::::
 
@@ -150,9 +149,9 @@ $$
 ![](images/paste-8.png)
 :::
 
-## Data
+## Data & Workflow Process
 
-Here I give a brief of the data
+![](images/paste-10.png)
 
 ## Results
 
