@@ -36,16 +36,9 @@ resources:
 
 ::::: columns
 ::: {.column width="40%"}
--   Demand: Policymakers need **reliable local unemployment statistics**.
+-   Labour Force Survey (LFS) estimates at disaggretated level have high variance, limitig reliability.
 
--   Large-scale surveys like the Labour Force Survey (LFS) are designed for national accuracy. For small domains like counties, direct estimates are often unreliable due to insufficient sample sizes.
-
-    ::: {.callout-note appearance="simple" icon="false"}
-    -   This leads to high sampling variance and wide margins of error for disaggregated estimates.
-
-    -   In extreme cases, estimates are suppressed
-        entirely.
-    :::
+-   For small domains like counties or municipalities, direct estimates are often unreliable due to insufficient sample sizes.
 :::
 
 ::: {.column width="60%"}
@@ -58,32 +51,38 @@ resources:
 ::: notes
 Set the context fast. This is a real official statistics problem.
 
--   For example, the Swedish LFS did not
-    report estimates for Gotland County due to having
-    fewer than 40 quarterly observations.
+-   For example, the Swedish LFS did not report estimates for Gotland County due to having fewer than 40 quarterly observations.
+-   This leads to high sampling variance and wide margins of error for disaggregated estimates.
+-   In extreme cases, estimates are suppressed ent
 :::
 
 ------------------------------------------------------------------------
 
-## The Framework: Borrowing Strength with Small Area Estimation
+## Borrowing Strength with Small Area Estimation
 
--   Small Area Estimation (SAE) provides a model-based solution by integrating survey data with auxiliary information to improve precision.
+-   Small Area Estimation (SAE) is a set of statistical techniques that produce reliable estimates for small domains by combining the survey data with auxiliary information.
+
+    ![](images/paste-5.png)
 
 -   There are two main broad categories of models under SAE:
 
-     1.  Area- Level Models
-     2.   Unit Level Models
+    1.  Area- Level Models
+    2.  Unit Level Models
 
--   This research employs the Fay-Herriot (FH) model,
-    a well-established hierarchical model in official statistics.
+```{=html}
+<!-- -   This research employs the Fay-Herriot (FH) model,
+    a well-established hierarchical model in official statistics. -->
+```
 
 ::: notes
 Battese–Harter–Fuller (BHF) model, Fay-Herriot Model
 :::
 
-## Methodology
+## We Applied a Fay-Herriot (FH) Area-Level Model
 
-Methods, Implementation
+1.  **Direct Estimates** ($\hat{y_i}$)- Used Q1 LFS direct unemployment rates and their sampling variances for the 20 of 21 Swedish Counties.
+2.  **Auxiliary Data** ($x'_i$) - A set of geospatial and administrative covariates for the 21 counties.
+3.  **Model Framework** -
 
 ## Data
 

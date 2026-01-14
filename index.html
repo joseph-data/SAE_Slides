@@ -151,18 +151,8 @@ Joseph Nyajuoga
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li><p>Demand: Policymakers need <strong>reliable local unemployment statistics</strong>.</p></li>
-<li><p>Large-scale surveys like the Labour Force Survey (LFS) are designed for national accuracy. For small domains like counties, direct estimates are often unreliable due to insufficient sample sizes.</p>
-<div class="callout callout-note no-icon callout-style-simple">
-<div class="callout-body">
-<div class="callout-content">
-<ul>
-<li><p>This leads to high sampling variance and wide margins of error for disaggregated estimates.</p></li>
-<li><p>In extreme cases, estimates are suppressed entirely.</p></li>
-</ul>
-</div>
-</div>
-</div></li>
+<li><p>Labour Force Survey (LFS) estimates at disaggretated level have high variance, limitig reliability.</p></li>
+<li><p>For small domains like counties or municipalities, direct estimates are often unreliable due to insufficient sample sizes.</p></li>
 </ul>
 </div><div class="column" style="width:60%;">
 <iframe src="imports/outputs/html/sweden_direct_map.html" width="100%" height="800" style="border:0;">
@@ -172,6 +162,8 @@ Joseph Nyajuoga
 <p>Set the context fast. This is a real official statistics problem.</p>
 <ul>
 <li>For example, the Swedish LFS did not report estimates for Gotland County due to having fewer than 40 quarterly observations.</li>
+<li>This leads to high sampling variance and wide margins of error for disaggregated estimates.</li>
+<li>In extreme cases, estimates are suppressed ent</li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -185,17 +177,19 @@ Joseph Nyajuoga
           display:block!important;
       }</style></aside>
 </section>
-<section id="the-framework-borrowing-strength-with-small-area-estimation" class="slide level2">
-<h2>The Framework: Borrowing Strength with Small Area Estimation</h2>
+<section id="borrowing-strength-with-small-area-estimation" class="slide level2">
+<h2>Borrowing Strength with Small Area Estimation</h2>
 <ul>
-<li><p>Small Area Estimation (SAE) provides a model-based solution by integrating survey data with auxiliary information to improve precision.</p></li>
+<li><p>Small Area Estimation (SAE) is a set of statistical techniques that produce reliable estimates for small domains by combining the survey data with auxiliary information.</p>
+<p><img data-src="images/paste-5.png"></p></li>
 <li><p>There are two main broad categories of models under SAE:</p>
 <ol type="1">
 <li>Area- Level Models</li>
 <li>Unit Level Models</li>
 </ol></li>
-<li><p>This research employs the Fay-Herriot (FH) model, a well-established hierarchical model in official statistics.</p></li>
 </ul>
+<!-- -   This research employs the Fay-Herriot (FH) model,
+    a well-established hierarchical model in official statistics. -->
 <aside class="notes">
 <p>Battese–Harter–Fuller (BHF) model, Fay-Herriot Model</p>
 <style type="text/css">
@@ -210,9 +204,13 @@ Joseph Nyajuoga
           display:block!important;
       }</style></aside>
 </section>
-<section id="methodology" class="slide level2">
-<h2>Methodology</h2>
-<p>Methods, Implementation</p>
+<section id="we-applied-a-fay-herriot-fh-area-level-model" class="slide level2">
+<h2>We Applied a Fay-Herriot (FH) Area-Level Model</h2>
+<ol type="1">
+<li><strong>Direct Estimates</strong> (<span class="math inline">\(\hat{y_i}\)</span>)- Used Q1 LFS direct unemployment rates and their sampling variances for the 20 of 21 Swedish Counties.</li>
+<li><strong>Auxiliary Data</strong> (<span class="math inline">\(x'_i\)</span>) - A set of geospatial and administrative covariates for the 21 counties.</li>
+<li><strong>Model Framework</strong> -</li>
+</ol>
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
