@@ -36,9 +36,9 @@ resources:
 
 ::::: columns
 ::: {.column width="40%"}
--   Labour Force Survey (LFS) estimates at disaggretated level have high variance, limitig reliability.
+-   National Statistical Institutes (NSIs) require precise, local-level labor market statistics for effective policy interventions and resource allocation. However, national surveys like Labor Force Survey (LFS) often have insufficient sample sizes for small areas.
 
--   For small domains like counties or municipalities, direct estimates are often unreliable due to insufficient sample sizes.
+-   Direct estimates for many smaller domains are often too unreliable for publication or, as in the case of Goltand, entirely.
 :::
 
 ::: {.column width="60%"}
@@ -49,6 +49,8 @@ resources:
 :::::
 
 ::: notes
+![](images/paste-9.png)
+
 Set the context fast. This is a real official statistics problem.
 
 -   For example, the Swedish LFS did not report estimates for Gotland County due to having fewer than 40 quarterly observations.
@@ -95,36 +97,50 @@ Battese–Harter–Fuller (BHF) model, Fay-Herriot Model
 Which can act as a powerful proxies for economic activity and infrastructure.
 :::
 
-## We Applied a Fay-Herriot (FH) Area-Level Model
+## Fay-Herriot (FH) Area-Level Model to Estimate County Unemployment Rates
 
 :::::: columns
 ::: {.column width="40%"}
 -   **Direct Estimates** ($\hat{y_i}$)- Used Q1 2025 LFS direct unemployment rates from SCB and their sampling variances for th 20 of 21 Swedish Counties.
 -   **Auxiliary Data** ($X'_i$) - A set of geospatial and administrative covariates for the 21 counties.
-:::
 
-::: {.column width="10%"}
-:::
-
-::: {.column width="50%"}
 **Model Framework**
 
-**Sampling Model:** $$\hat{y_i} = \theta_i + e_i$$
+1.  **Sampling Model:** $$\hat{y_i} = \theta_i + e_i$$
 
 -   $\theta_i$ is the true, unknown value of unemployment rate of area $i$
 
 <!-- -->
 
 -   $e_i$ is sampling error (uncertainity inherent in the survey strategy)
+:::
 
-**Linking Model:** $$\theta_i = X_i^\top\beta + \mu_i$$
+::: {.column width="5%"}
+:::
 
+::: {.column width="55%"}
+2.  **Linking Model:** $$\theta_i = X_i^\top\beta + \mu_i$$
 
 -   $\beta$ represents a vector of unknown regression coeﬀicients, assumed to be constant across all areas $i$.
 
 <!-- -->
 
 -   $u_i$ is denotes the area-specific random effect for area $i$.
+
+3.  **Prediction: Emprical Best Linear Unbiased Predictor (EBLUP)**
+
+$$
+\tilde{\theta}_i
+= \gamma_i y_i + (1 - \gamma_i)\, x_i^\top \beta
+$$
+
+The weight $\gamma_i$ is the shrinkage factor, defined as:
+
+$$
+\gamma_i
+= \frac{\sigma_u^2}{\sigma_u^2 + \psi_i}
+$$
+
 :::
 ::::::
 
@@ -132,8 +148,6 @@ Which can act as a powerful proxies for economic activity and infrastructure.
 ![](images/paste-7.png)
 
 ![](images/paste-8.png)
-
-Which can act as a powerful proxies for economic activity and infrastructure.
 :::
 
 ## Data

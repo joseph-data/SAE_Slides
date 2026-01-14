@@ -151,14 +151,15 @@ Joseph Nyajuoga
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
-<li><p>Labour Force Survey (LFS) estimates at disaggretated level have high variance, limitig reliability.</p></li>
-<li><p>For small domains like counties or municipalities, direct estimates are often unreliable due to insufficient sample sizes.</p></li>
+<li><p>National Statistical Institutes (NSIs) require precise, local-level labor market statistics for effective policy interventions and resource allocation. However, national surveys like Labor Force Survey (LFS) often have insufficient sample sizes for small areas.</p></li>
+<li><p>Direct estimates for many smaller domains are often too unreliable for publication or, as in the case of Goltand, entirely.</p></li>
 </ul>
 </div><div class="column" style="width:60%;">
 <iframe src="imports/outputs/html/sweden_direct_map.html" width="100%" height="800" style="border:0;">
 </iframe>
 </div></div>
 <aside class="notes">
+<p><img data-src="images/paste-9.png"></p>
 <p>Set the context fast. This is a real official statistics problem.</p>
 <ul>
 <li>For example, the Swedish LFS did not report estimates for Gotland County due to having fewer than 40 quarterly observations.</li>
@@ -229,19 +230,18 @@ Joseph Nyajuoga
           display:block!important;
       }</style></aside>
 </section>
-<section id="we-applied-a-fay-herriot-fh-area-level-model" class="slide level2">
-<h2>We Applied a Fay-Herriot (FH) Area-Level Model</h2>
+<section id="fay-herriot-fh-area-level-model-to-estimate-county-unemployment-rates" class="slide level2">
+<h2>Fay-Herriot (FH) Area-Level Model to Estimate County Unemployment Rates</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
 <ul>
 <li><strong>Direct Estimates</strong> (<span class="math inline">\(\hat{y_i}\)</span>)- Used Q1 2025 LFS direct unemployment rates from SCB and their sampling variances for th 20 of 21 Swedish Counties.</li>
 <li><strong>Auxiliary Data</strong> (<span class="math inline">\(X'_i\)</span>) - A set of geospatial and administrative covariates for the 21 counties.</li>
 </ul>
-</div><div class="column" style="width:10%;">
-
-</div><div class="column" style="width:50%;">
 <p><strong>Model Framework</strong></p>
-<p><strong>Sampling Model:</strong> <span class="math display">\[\hat{y_i} = \theta_i + e_i\]</span></p>
+<ol type="1">
+<li><strong>Sampling Model:</strong> <span class="math display">\[\hat{y_i} = \theta_i + e_i\]</span></li>
+</ol>
 <ul>
 <li><span class="math inline">\(\theta_i\)</span> is the true, unknown value of unemployment rate of area <span class="math inline">\(i\)</span></li>
 </ul>
@@ -249,7 +249,12 @@ Joseph Nyajuoga
 <ul>
 <li><span class="math inline">\(e_i\)</span> is sampling error (uncertainity inherent in the survey strategy)</li>
 </ul>
-<p><strong>Linking Model:</strong> <span class="math display">\[\theta_i = X_i^\top\beta + \mu_i\]</span></p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:55%;">
+<ol start="2" type="1">
+<li><strong>Linking Model:</strong> <span class="math display">\[\theta_i = X_i^\top\beta + \mu_i\]</span></li>
+</ol>
 <ul>
 <li><span class="math inline">\(\beta\)</span> represents a vector of unknown regression coeﬀicients, assumed to be constant across all areas <span class="math inline">\(i\)</span>.</li>
 </ul>
@@ -257,11 +262,22 @@ Joseph Nyajuoga
 <ul>
 <li><span class="math inline">\(u_i\)</span> is denotes the area-specific random effect for area <span class="math inline">\(i\)</span>.</li>
 </ul>
+<ol start="3" type="1">
+<li><strong>Prediction: Emprical Best Linear Unbiased Predictor (EBLUP)</strong></li>
+</ol>
+<p><span class="math display">\[
+\tilde{\theta}_i
+= \gamma_i y_i + (1 - \gamma_i)\, x_i^\top \beta
+\]</span></p>
+<p>The weight <span class="math inline">\(\gamma_i\)</span> is the shrinkage factor, defined as:</p>
+<p><span class="math display">\[
+\gamma_i
+= \frac{\sigma_u^2}{\sigma_u^2 + \psi_i}
+\]</span></p>
 </div></div>
 <aside class="notes">
 <p><img data-src="images/paste-7.png"></p>
 <p><img data-src="images/paste-8.png"></p>
-<p>Which can act as a powerful proxies for economic activity and infrastructure.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
