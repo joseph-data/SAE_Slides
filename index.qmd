@@ -30,6 +30,7 @@ execute:
 resources:
   - imports/outputs/html/sweden_direct_map.html
   - imports/outputs/html/sweden_direct_map_files/
+output-dir: docs
 ---
 
 ## The Challenge: Traditional Surveys Fall Short in Small Areas
@@ -78,10 +79,28 @@ Set the context fast. This is a real official statistics problem.
 Battese–Harter–Fuller (BHF) model, Fay-Herriot Model
 :::
 
+## Contribution of the Thesis
+
+::::: columns
+::: {.column width="40%"}
+- Traditional SAE relies on administrative data or registers.
+- We explored the value of integrating satellite-derived geospatial data.
+:::
+
+::: {.column width="60%"}
+![](images/paste-6.png)
+:::
+:::::
+
+::: notes
+Which can act as a powerful proxies for economic activity and infrastructure.
+:::
+
+
 ## We Applied a Fay-Herriot (FH) Area-Level Model
 
-1.  **Direct Estimates** ($\hat{y_i}$)- Used Q1 LFS direct unemployment rates and their sampling variances for the 20 of 21 Swedish Counties.
-2.  **Auxiliary Data** ($x'_i$) - A set of geospatial and administrative covariates for the 21 counties.
+1.  **Direct Estimates** ($\hat{y_i}$)- Used Q1 2025 LFS direct unemployment rates from SCB and their sampling variances for the 20 of 21 Swedish Counties.
+2.  **Auxiliary Data** ($X'_i$) - A set of geospatial and administrative covariates for the 21 counties.
 3.  **Model Framework** -
 
 ## Data
