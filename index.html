@@ -231,11 +231,48 @@ Joseph Nyajuoga
 </section>
 <section id="we-applied-a-fay-herriot-fh-area-level-model" class="slide level2">
 <h2>We Applied a Fay-Herriot (FH) Area-Level Model</h2>
-<ol type="1">
-<li><strong>Direct Estimates</strong> (<span class="math inline">\(\hat{y_i}\)</span>)- Used Q1 2025 LFS direct unemployment rates from SCB and their sampling variances for the 20 of 21 Swedish Counties.</li>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li><strong>Direct Estimates</strong> (<span class="math inline">\(\hat{y_i}\)</span>)- Used Q1 2025 LFS direct unemployment rates from SCB and their sampling variances for th 20 of 21 Swedish Counties.</li>
 <li><strong>Auxiliary Data</strong> (<span class="math inline">\(X'_i\)</span>) - A set of geospatial and administrative covariates for the 21 counties.</li>
-<li><strong>Model Framework</strong> -</li>
-</ol>
+</ul>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:50%;">
+<p><strong>Model Framework</strong></p>
+<p><strong>Sampling Model:</strong> <span class="math display">\[\hat{y_i} = \theta_i + e_i\]</span></p>
+<ul>
+<li><span class="math inline">\(\theta_i\)</span> is the true, unknown value of unemployment rate of area <span class="math inline">\(i\)</span></li>
+</ul>
+<!-- -->
+<ul>
+<li><span class="math inline">\(e_i\)</span> is sampling error (uncertainity inherent in the survey strategy)</li>
+</ul>
+<p><strong>Linking Model:</strong> <span class="math display">\[\theta_i = X_i^\top\beta + \mu_i\]</span></p>
+<ul>
+<li><span class="math inline">\(\beta\)</span> represents a vector of unknown regression coeﬀicients, assumed to be constant across all areas <span class="math inline">\(i\)</span>.</li>
+</ul>
+<!-- -->
+<ul>
+<li><span class="math inline">\(u_i\)</span> is denotes the area-specific random effect for area <span class="math inline">\(i\)</span>.</li>
+</ul>
+</div></div>
+<aside class="notes">
+<p><img data-src="images/paste-7.png"></p>
+<p><img data-src="images/paste-8.png"></p>
+<p>Which can act as a powerful proxies for economic activity and infrastructure.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="data" class="slide level2">
 <h2>Data</h2>
