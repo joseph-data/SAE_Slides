@@ -30,7 +30,6 @@ execute:
 resources:
   - imports/outputs/html/sweden_direct_map.html
   - imports/outputs/html/sweden_direct_map_files/
-output-dir: docs
 ---
 
 ## The Challenge: Traditional Surveys Fall Short in Small Areas
