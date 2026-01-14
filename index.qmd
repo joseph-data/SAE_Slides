@@ -153,7 +153,66 @@ $$
 
 ![](images/paste-10.png)
 
-## Results
+# Results
+
+## Stepwise Selection Identified four key geospatial covariates
+
+::::: columns
+::: {.column width="60%"}
+-   Initial Analysis revealed high collinearity among several potential covariates. ![](images/paste-11.png)
+:::
+
+::: {.column width="40%"}
+-   Stepwise regression model is used to reduce the model by checking the AIC/BIC values. The final model retained four key predictors.
+
+    ![](images/paste-14.png){width="725"}
+
+-   The reduced model had an $R²$ of 0.95 with lowest AIC (-109.58) and BIC (-103.60)
+:::
+:::::
+
+::: notes
+![](images/paste-12.png)
+
+![](images/paste-13.png)
+
+Table 4.1 shows that the reduced original scale FH model with log elevation, slope, population density and urban cover percentage is the preferred model. The model, had better overall fit when examining the AIC and BIC values. The transformed models did not outperform the original and introduces uncertainties due to back-transformation. The original scale model strikes a good balance between parsimony and explanatory power and is preferred in this study in the production of county-level estimates.
+:::
+
+## FH model delivered substantial gains in precision over the direct estimates
+
+::::: columns
+::: {.column width="30%"}
+-   The model-based estimates consistently showed lower Mean Squared Error (MSE) and Coefficient of Variation (CV), indicating significant improvement in reliability.
+-   The adaptive shrinkage property of EBLUP.
+:::
+
+::: {.column width="70%"}
+![](images/paste-16.png){width="100%"}
+
+![](images/paste-15.png){width="100%"}
+:::
+:::::
+
+## Direct vs. Model Based Estimates
+
+-   The model based estimates show lower CVs across nearly all counties, with huge improvements in the areas where direct estimates were previously uncertain.
+
+![](images/paste-18.png)
+
+## Diagnostic checks for robustness
+
+-   The reliability of the model-based estimates depends on the validility of the underlying statistical assumption.
+
+::::: columns
+::: {.column width="60%"}
+![](images/paste-19.png)
+:::
+
+::: {.column width="40%"}
+-   Normality: Q-Q Plots
+:::
+:::::
 
 ## Conclusions
 

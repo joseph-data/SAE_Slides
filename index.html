@@ -294,8 +294,74 @@ Joseph Nyajuoga
 <h2>Data &amp; Workflow Process</h2>
 
 <img data-src="images/paste-10.png" class="r-stretch"></section>
-<section id="results" class="slide level2">
-<h2>Results</h2>
+<section>
+<section id="results" class="title-slide slide level1 center">
+<h1>Results</h1>
+
+</section>
+<section id="stepwise-selection-identified-four-key-geospatial-covariates" class="slide level2">
+<h2>Stepwise Selection Identified four key geospatial covariates</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li>Initial Analysis revealed high collinearity among several potential covariates. <img data-src="images/paste-11.png"></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<ul>
+<li><p>Stepwise regression model is used to reduce the model by checking the AIC/BIC values. The final model retained four key predictors.</p>
+<p><img data-src="images/paste-14.png" width="725"></p></li>
+<li><p>The reduced model had an <span class="math inline">\(R²\)</span> of 0.95 with lowest AIC (-109.58) and BIC (-103.60)</p></li>
+</ul>
+</div></div>
+<aside class="notes">
+<p><img data-src="images/paste-12.png"></p>
+<p><img data-src="images/paste-13.png"></p>
+<p>Table 4.1 shows that the reduced original scale FH model with log elevation, slope, population density and urban cover percentage is the preferred model. The model, had better overall fit when examining the AIC and BIC values. The transformed models did not outperform the original and introduces uncertainties due to back-transformation. The original scale model strikes a good balance between parsimony and explanatory power and is preferred in this study in the production of county-level estimates.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fh-model-delivered-substantial-gains-in-precision-over-the-direct-estimates" class="slide level2">
+<h2>FH model delivered substantial gains in precision over the direct estimates</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<ul>
+<li>The model-based estimates consistently showed lower Mean Squared Error (MSE) and Coefficient of Variation (CV), indicating significant improvement in reliability.</li>
+<li>The adaptive shrinkage property of EBLUP.</li>
+</ul>
+</div><div class="column" style="width:70%;">
+<p><img data-src="images/paste-16.png" style="width:100.0%"></p>
+<p><img data-src="images/paste-15.png" style="width:100.0%"></p>
+</div></div>
+</section>
+<section id="direct-vs.-model-based-estimates" class="slide level2">
+<h2>Direct vs.&nbsp;Model Based Estimates</h2>
+<ul>
+<li>The model based estimates show lower CVs across nearly all counties, with huge improvements in the areas where direct estimates were previously uncertain.</li>
+</ul>
+
+<img data-src="images/paste-18.png" class="r-stretch"></section>
+<section id="diagnostic-checks-for-robustness" class="slide level2">
+<h2>Diagnostic checks for robustness</h2>
+<ul>
+<li>The reliability of the model-based estimates depends on the validility of the underlying statistical assumption.</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><img data-src="images/paste-19.png"></p>
+</div><div class="column" style="width:40%;">
+<ul>
+<li>Normality: Q-Q Plots</li>
+</ul>
+</div></div>
 </section>
 <section id="conclusions" class="slide level2">
 <h2>Conclusions</h2>
@@ -307,7 +373,7 @@ Joseph Nyajuoga
 <section id="thank-you-for-your-attention.." class="slide level2">
 <h2>Thank you for your attention..</h2>
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/Oru_logo_ENG.svg" class="slide-logo"></p>
